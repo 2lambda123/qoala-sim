@@ -622,14 +622,14 @@ class EhiNetworkInfo:
         cls, nodes: Dict[int, str], duration: float
     ) -> EhiNetworkInfo:
         """
-         Convenience method to create a perfect fully connected network with given nodes and link information.
-         A fully connected network means that each pair of nodes has a link between them with the same link information
-         and perfect means that the link has 1.0 fidelity.
+        Convenience method to create a perfect fully connected network with given nodes and link information.
+        A fully connected network means that each pair of nodes has a link between them with the same link information
+        and perfect means that the link has 1.0 fidelity.
 
-         :param nodes: Nodes in the network.
-         :param duration: The duration of the entanglement distribution in ns.
-         :return: A perfect fully connected network with given nodes and link information.
-         """
+        :param nodes: Nodes in the network.
+        :param duration: The duration of the entanglement distribution in ns.
+        :return: A perfect fully connected network with given nodes and link information.
+        """
         link = EhiLinkInfo(duration=duration, fidelity=1.0)
         return cls.fully_connected(nodes, link)
 
